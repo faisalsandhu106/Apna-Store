@@ -6,9 +6,8 @@ const CartReducer = (state, action) => {
 
         // console.log(product)
 
-        // Tackle the Existing Products
-        let existingProduct = state.cart
-        if (existingProduct) {
+        // Tackle the Existing Product
+        if (id) {
             let updatedProduct = state.cart.map((curElem) => {
                 if (curElem.id === id) {
                     let newAmount = curElem.amount + amount
