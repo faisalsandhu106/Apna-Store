@@ -5,28 +5,7 @@ const CartReducer = (state, action) => {
         let { id, amount, product } = action.payload;
 
         // console.log(product)
-
-        // Tackle the Existing Product
-        if (id) {
-            let updatedProduct = state.cart.map((curElem) => {
-                if (curElem.id === id) {
-                    let newAmount = curElem.amount + amount
-                    return {
-                        ...curElem,
-                        amount: newAmount
-                    }
-                } else {
-                    return curElem
-                }
-            })
-
-            return {
-                ...state,
-                cart: updatedProduct,
-            }
-
-        } else {
-            let cartProducts = {
+        let cartProducts = {
                 id: id,
                 title: product.title,
                 amount,
@@ -38,7 +17,6 @@ const CartReducer = (state, action) => {
                 ...state,
                 cart: [...state.cart, cartProducts],
             }
-        }
     };
 
     //Delete Product From CartSection
