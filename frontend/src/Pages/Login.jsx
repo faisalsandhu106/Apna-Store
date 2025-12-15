@@ -29,7 +29,7 @@ const Login = () => {
         };
 
         try {
-            const url = 'http://localhost:3000/auth/login';
+            const url = 'https://apna-store-backend-navy.vercel.app/';
             const res = await fetch(url, {
                 method: 'POST',
                 headers: {
