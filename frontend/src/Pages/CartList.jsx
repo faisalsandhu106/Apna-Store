@@ -10,11 +10,11 @@ const CartList = () => {
     const { cart, updateCartData, cartClear, shipping_fee, total_price } = UseCartContext();
     // console.log(cart)
 
-    if (cart.length === 0) {
-        return <div className='flex items-center justify-center gap-x-2 w-full min-h-screen text-[1.9em]'>
-            Your Cart Empty <PiEmptyLight />
-        </div>
-    }
+    // if (cart.length === 0) {
+    //     return <div className='flex items-center justify-center gap-x-2 w-full min-h-screen text-[1.9em]'>
+    //         Your Cart Empty <PiEmptyLight />
+    //     </div>
+    // }
 
     return (
         <>
