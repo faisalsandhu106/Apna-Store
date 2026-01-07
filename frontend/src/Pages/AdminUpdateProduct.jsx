@@ -38,7 +38,7 @@ const AdminUpdateProduct = () => {
     // *Get Individual Product Data In Admin Panel ----- In File
     // *------------------------------------------
     const getAllproductIndividual = async () => {
-        const res = await fetch(`http://localhost:3000/admin/allproduct/${id}`, {
+        const res = await fetch(`https://apna-store-mern-backend.vercel.app/admin/allproduct/${id}`, {
             method: "GET",
             headers: {
                 'Content-Type': 'application/json'
@@ -65,7 +65,7 @@ const AdminUpdateProduct = () => {
         if (!feature & !status) {
             return hendleError("Please, Feature & Status inputs requried");
         };
-        const url = `http://localhost:3000/admin/allproduct/update/${id}`;
+        const url = `https://apna-store-mern-backend.vercel.app/admin/allproduct/update/${id}`;
         const res = await fetch(url, {
             method: "PATCH",
             headers: {
