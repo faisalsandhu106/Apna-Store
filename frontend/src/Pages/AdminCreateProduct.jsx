@@ -42,7 +42,7 @@ const AdminCreateProduct = () => {
 
   const handleCreateProduct = async (event) => {
     event.preventDefault();
-    const url = "http://localhost:3000/admin/craeteproduct";
+    const url = "https://apna-store-mern-backend.vercel.app/admin/craeteproduct";
     const { feature } = isCreate;
     if (!feature ) {
       return hendleError("Please, Feature inputs requried");
