@@ -3,8 +3,7 @@ import reducer from '../Reducer/ProductReducer'
 import axios from "axios";
 
 const AppContext = createContext();
-// const API = "https://dummyjson.com/products"
-const API = "http://localhost:3000/api/allproducts"
+const API = "https://apna-store-mern-backend.vercel.app/api/allproducts"
 
 const initialState = {
     isLoading: false,
@@ -17,10 +16,7 @@ const initialState = {
 };
 
 const AppProvider = ({ children }) => {
-
     const [state, dispatch] = useReducer(reducer, initialState);
-
-
     // *-------------------------
     // *Get All Products API Data
     // *-------------------------
@@ -37,25 +33,8 @@ const AppProvider = ({ children }) => {
         }
     };
 
-    // *------------------------------
-    // *Get Allproduct Individual Data
-    // *------------------------------
-    // const getIndividualProducts = async (id) => {
-    //     dispatch({ type: "SET_SINGLEPRODUCT_LOADING" })
-    //     try {
-    //         const res = await axios.get(`${API}/${id}`)
-    //         const singleProduct = await res.data;
-    //         // console.log('data', singleProduct)
-    //         dispatch({ type: "SET_SINGLEPRODUCT_DATA", payload: singleProduct })
-
-    //     } catch (error) {
-    //         dispatch({ type: "SINGLEPRODUCT_ERROR" })
-    //     }
-    // };
-
     useEffect(() => {
         getProducts(API);
-        // getIndividualProducts(API);
     }, []);
 
     return (
