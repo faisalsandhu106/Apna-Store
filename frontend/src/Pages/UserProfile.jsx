@@ -42,7 +42,7 @@ const UserProfile = () => {
     // TODO--------------------------
     const handleUpdateUser = async (event) => {
         event.preventDefault();
-        const res = await fetch(`http://localhost:3000/auth//user/update/${''}`, {
+        const res = await fetch(`https://apna-store-mern-backend.vercel.app/auth/user/update/${''}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json"
