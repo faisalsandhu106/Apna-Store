@@ -21,7 +21,7 @@ const AdminContactForm = () => {
   // *Delete ContactForm In admin Penal
   // !---------------------------------
   const deleteContactFormData = async (id) => {
-    const res = await fetch(`http://localhost:3000/admin/user/contactform/delete/${id}`, {
+    const res = await fetch(`https://apna-store-mern-backend.vercel.app/admin/user/contactform/delete/${id}`, {
       method: "DELETE",
       headers: {
         'Content-Type': 'application/json'
