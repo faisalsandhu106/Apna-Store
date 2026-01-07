@@ -22,7 +22,7 @@ const AdminUpdateForm = () => {
     // *Get ContactForm Individual Data In Admin Panel
     // *---------------------------------------------
     const getSingleProductData = async () => {
-        const res = await fetch(`http://localhost:3000/admin/contactform/${id}`, {
+        const res = await fetch(`https://apna-store-mern-backend.vercel.app/admin/contactform/${id}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json"
@@ -49,7 +49,7 @@ const AdminUpdateForm = () => {
     // TODO------------------------------
     const handleUpdateUser = async (event) => {
         event.preventDefault();
-        const res = await fetch(`http://localhost:3000/admin/contactform/update/${id}`, {
+        const res = await fetch(`https://apna-store-mern-backend.vercel.app/admin/contactform/update/${id}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json"
