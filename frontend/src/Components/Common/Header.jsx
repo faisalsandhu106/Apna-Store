@@ -63,7 +63,7 @@ const Header = () => {
     return (
         <>
             <div className='header-theme fixed top-0 left-0 z-[50] flex items-center justify-between xs:px-4 md:px-7 xl:px-8 py-3 gap-x-4 w-full h-auto capitalize shadow-sm duration-150'>
-                <NavLink onClick={toggleMenbar} to='/home' className='xs:text-[1.3em] md:text-[1.2em] xl:text-[1.3em] font-medium cursor-pointer'>
+                <NavLink to='/home' className='xs:text-[1.3em] md:text-[1.2em] xl:text-[1.3em] font-medium cursor-pointer'>
                     <h1>Logo</h1>
                 </NavLink>
                 <div className='flex items-center justify-end lg:gap-x-12 xl:gap-x-20 w-full h-auto'>
