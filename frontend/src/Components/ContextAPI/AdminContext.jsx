@@ -6,7 +6,7 @@ import reducer from "../Reducer/AdminReducer"
 const AdminContext = createContext();
 
 const AdminProvider = ({ children }) => {
-    const api = 'http://localhost:3000'
+    const api = 'https://apna-store-mern-backend.vercel.app'
 
     const initialState = {
         getAlluser: [],
@@ -47,7 +47,7 @@ const AdminProvider = ({ children }) => {
     const getContactForm = async () => {
         dispatch({ type: "SET_CONTACT_LOADING" })
         try {
-            const res = await axios.get(`http://localhost:3000/admin/contactform`)
+            const res = await axios.get(`https://apna-store-mern-backend.vercel.app/admin/contactform`)
             const getAllcontactForm = await res.data;
             // console.log('data', getAllcontactForm)
             dispatch({ type: "SET_CONTACTFORM_DATA", payload: getAllcontactForm })
