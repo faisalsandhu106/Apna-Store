@@ -22,7 +22,7 @@ const AdminUpdateUser = () => {
     // *Get Allproduct Individual Data In Admin Panel
     // *---------------------------------------------
     const getSingleProductData = async () => {
-        const res = await fetch(`http://localhost:3000/admin/user/${id}`, {
+        const res = await fetch(`https://apna-store-mern-backend.vercel.app/admin/user/${id}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json"
@@ -31,13 +31,6 @@ const AdminUpdateUser = () => {
 
         const data = await res.json();
         setIsuser(data)
-
-        // if (res.ok) {
-        //     hendleSuccess(data.message)
-        // } else {
-        //     hendleError(data.message)
-        // }
-
     };
 
     const handleInputValue = (e) => {
@@ -55,7 +48,7 @@ const AdminUpdateUser = () => {
     // TODO--------------------------
     const handleUpdateUser = async (event) => {
         event.preventDefault();
-        const res = await fetch(`http://localhost:3000/admin/user/update/${id}`, {
+        const res = await fetch(`https://apna-store-mern-backend.vercel.app/admin/user/update/${id}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json"
@@ -128,14 +121,6 @@ const AdminUpdateUser = () => {
                                 onChange={handleInputValue}
                                 value={isUser.address}
                                 className='custom-input' />
-                            {/* <input
-                                type="text"
-                                placeholder='Password'
-                                autoComplete='off'
-                                name='password'
-                                onChange={handleInputValue}
-                                value={isUser.password}
-                                className='custom-input' /> */}
                         </div>
                         <div className='mt-8 w-full'>
                             <button type='submit' className='flex items-center justify-center gap-x-1 w-full py-[8px] text-[0.98em]  font-medium rounded-md bg-none hover:bg-none bg-[#db319d] hover:bg-[#a41570]'>
