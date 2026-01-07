@@ -4,7 +4,6 @@ import LoadingAnimate from '../Components/Common/LoadingAnimate';
 import { ToastContainer } from 'react-toastify';
 import { NavLink } from 'react-router-dom';
 import { hendleError, hendleSuccess } from '../Components/Utils';
-// import { Navigate, useNavigate } from 'react-router-dom';
 
 const AdminUserProfile = () => {
   const { isLoading, getAlluser } = UseAdminContext()
@@ -19,7 +18,7 @@ const AdminUserProfile = () => {
   // *Delete User In Admin Penal
   // !--------------------------
   const deleteUserData = async (id) => {
-    const res = await fetch(`http://localhost:3000/admin/user/delete/${id}`, {
+    const res = await fetch(`https://apna-store-mern-backend.vercel.app/admin/user/delete/${id}`, {
       method: "DELETE",
       headers: {
         'Content-Type': 'application/json'
