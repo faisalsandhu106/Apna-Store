@@ -10,7 +10,6 @@ import AddProductButton from '../Components/ShopComps/AddProductButton';
 import { ToastContainer } from 'react-toastify';
 
 const SingleProduct = () => {
-  // const { isSingleLoading, singleProduct } = UseProductContext();
   const { id } = useParams();
   // console.log(singleProduct)
 
@@ -40,7 +39,7 @@ const SingleProduct = () => {
   })
 
   const getAllproductIndividual = async () => {
-    const res = await fetch(`http://localhost:3000/api/allproducts/${id}`, {
+    const res = await fetch(`https://apna-store-mern-backend.vercel.app/api/allproducts/${id}`, {
       method: "GET",
       headers: {
         'Content-Type': 'application/json'
