@@ -20,7 +20,7 @@ const SigupUpdated = () => {
         // *Get Allproduct Individual Data In Admin Panel
         // *---------------------------------------------
         const getSingleProductData = async () => {
-            const res = await fetch(`http://localhost:3000/admin/user/${id}`, {
+            const res = await fetch(`https://apna-store-mern-backend.vercel.app/admin/user/${id}`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json"
@@ -28,14 +28,7 @@ const SigupUpdated = () => {
             });
     
             const data = await res.json();
-            setIsuser(data)
-    
-            // if (res.ok) {
-            //     hendleSuccess(data.message)
-            // } else {
-            //     hendleError(data.message)
-            // }
-    
+            setIsuser(data)    
         };
     
         const handleInputValue = (e) => {
@@ -53,7 +46,7 @@ const SigupUpdated = () => {
         // TODO--------------------------
         const handleUpdateUser = async (event) => {
             event.preventDefault();
-            const res = await fetch(`http://localhost:3000/admin/user/update/${id}`, {
+            const res = await fetch(`https://apna-store-mern-backend.vercel.app/admin/user/update/${id}`, {
                 method: "PATCH",
                 headers: {
                     "Content-Type": "application/json"
@@ -67,7 +60,6 @@ const SigupUpdated = () => {
                 hendleError("Not Updated Data")
             }
         };
-
 
         useEffect(() => {
                 getSingleProductData()
